@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OptionsDialog</class>
+ <widget class="QDialog" name="OptionsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>697</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Options</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#OptionsDialog{background-color:  rgb(43,43,43); }
+QScrollBar::vertical {
+      background-color: #153133;
+
+      width: 8px;
+ }
+ QScrollBar:horizontal {
+      background-color: #153133;
+      height: 8px;
+ }
+ QScrollBar::handle:vertical{
+      background-color: #509FA6;
+      min-height: 20px;
+	  border-radius: 1px;
+
+  }
+ QScrollBar::handle:horizontal{
+      background-color: #509FA6;
+      min-width: 20px;
+	border-radius: 1px;
+  }
+
+  QScrollBar::add-line:vertical ,  QScrollBar::add-line:horizontal {
+      height: 1px;
+  }
+  QScrollBar::sub-line:vertical,  QScrollBar::sub-line:horizontal{
+      height: 1px;
+  }
+
+  QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical ,  QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+      background: none;
+  }</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#listWidget{
+background-color: #313131; 
+border: 1px solid #444444;
+border-radius: 4px;
+color: white;}</string>
+       </property>
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <property name="viewMode">
+        <enum>QListView::ListMode</enum>
+       </property>
+       <property name="currentRow">
+        <number>-1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>General Options</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Shortcuts</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="styleSheet">
+        <string notr="true">#stackedWidget{
+background-color: #313131;
+border: 1px solid #444444; 
+border-radius: 4px;}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
